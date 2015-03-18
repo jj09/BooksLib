@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Books Lib</title>
+        <meta name="description" content="Example website using voice recognition library voiceCmdr">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel='stylesheet' href='/vendor/metro-bootstrap/metro-bootstrap.css' />
+		<link rel='stylesheet' href='/vendor/font-awesome/css/font-awesome.min.css' />
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+
+    </head>
+    <body ng-app="app">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+               
+        @html.include("header")
+        
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            <li>
+                                <a href="#/">Home</a>
+                            </li>
+                            <li>
+                                <a href="#/books">Books</a>
+                            </li>
+                            <li>
+                                <a href="#/books/favorites">Favorites</a>
+                            </li>
+                            <li>
+                                <a href="#/books/top10">Top 10</a>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9" role="main" ng-view></div>
+            </div>
+        </div>
+
+        @html.include("footer")
+
+        @html.include("scripts")
+    </body>
+</html>

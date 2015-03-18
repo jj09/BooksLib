@@ -1,0 +1,42 @@
+<div class="bs-docs-section">
+	<div class="page-header">
+		<h1>{{title}}</h1>
+	</div>
+
+	<div>		
+		<form class="form-inline form-large" ng-show="!!sortOptions && !!sortBy">
+			<div class="form-group">
+				Search:
+				<input ng-model="searchText" class="form-control">
+			</div>
+			<div class="form-group">
+				Sort by:
+				<select ng-model="sortBy" ng-options="item.value as item.text for item in sortOptions" class="form-control"></select>
+			</div>
+		</form>		
+	</div>
+
+	<div class="bs-example">
+		
+		<div class="row" ng-repeat="book in books | filter:searchText | orderBy:sortBy">
+
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail tile tile-big tile-clouds col-md-12">
+					<a href="#/books/{{book._id}}" >
+						<img src="{{book.coverUrl}}" alt="{{book.title}}" />						
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-8">
+				<h1>{{book.title}}</h1>
+				<h3>{{book.author}}</h3>
+				<hr />
+				<div>
+					<h4>Votes: {{book.votes}}</h4><a href="" ng-click="upVote(book)"><img src="/images/upvote.png" alt="Upvote" /></a>
+				</div>
+
+				<a href="" ng-click="favorite(book)"><img src="/images/star.png" ng-style="{opacity: book.isFavorite ? 1 : 0.2}" /></a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<script type="text/javascript" src="/vendor/voice-cmdr/dist/voiceCmdr.js"></script>
+<script type="text/javascript" src="/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="/vendor/angular/angular.js"></script>
+<script type="text/javascript" src="/vendor/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="/vendor/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="/app/app.js"></script>
+<script type="text/javascript" src="/app/home/HomeController.js"></script>
+<script type="text/javascript" src="/app/books/booksService.js"></script>
+<script type="text/javascript" src="/app/books/BooksController.js"></script>
+<script type="text/javascript" src="/app/books/bookService.js"></script>
+<script type="text/javascript" src="/app/books/BookController.js"></script>
+<script type="text/javascript" src="/app/books/favoritesService.js"></script>
+<script type="text/javascript" src="/app/books/FavoritesController.js"></script>
+<script type="text/javascript" src="/app/books/top10Service.js"></script>
+<script type="text/javascript" src="/app/books/Top10Controller.js"></script>

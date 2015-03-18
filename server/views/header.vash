@@ -1,0 +1,29 @@
+<header class="navbar navbar-default navbar-static-top bsnavbar">
+    <div class="container">
+        <div class="navbar-header">                    
+            <a href="index.html#/">
+                <img class="bannerad-img" src="images/banners/banner2.png" title="BooksLib" alt="BooksLib" height="90" width="120">
+            </a>
+            <a class="navbar-brand" href="index.html">
+                <h1>Books Lib</h1>
+            </a>
+
+        </div>
+        
+        <div class="collapse navbar-collapse" ng-if="isVoiceSupported">
+            <div class="navbar-right" style="padding: 10px; spacing: 10px">
+                <div class="col-md-4">
+                    <img ng-src="/images/status/sound-graph.{{recStatus()}}" alt="status" id="recStatus" />
+                </div>
+
+                <div class="col-md-8">
+                    <button class="btn btn-default" ng-click="listening(true)">Start</button>
+                    <button class="btn btn-default" ng-click="listening(false)">Stop</button>
+                    <br /><br />
+                    <button class="btn btn-default" ng-click="getCommand()">Get single command</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
