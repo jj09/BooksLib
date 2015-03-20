@@ -10,7 +10,7 @@
         <meta name="description" content="Example website using voice recognition library voiceCmdr">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel='stylesheet' href='/vendor/metro-bootstrap/metro-bootstrap.css' />
+		<link rel='stylesheet' href='/vendor/metro-bootstrap/dist/css/metro-bootstrap.min.css' />
 		<link rel='stylesheet' href='/vendor/font-awesome/css/font-awesome.min.css' />
 		<link rel='stylesheet' href='/stylesheets/style.css' />
 
