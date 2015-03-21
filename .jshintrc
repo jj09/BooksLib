@@ -6,7 +6,8 @@
 	"eqeqeq": true,
 	"globals": {
 		"angular": false,
-		"voiceCmdr": false
+		"voiceCmdr": false,
+		"$": false
 	},
 	"indent": 4,
 	"latedef": true,

@@ -66,6 +66,13 @@
 
 			voiceCmdr.addCommand('search', function (searchText) {
 				$location.path('/books');
+
+				var $searchText = $('#searchText');
+				
+				if($searchText.is(':focus')) {
+					$searchText.blur();
+				}
+
 				$rootScope.searchText = searchText;
 			});
 
