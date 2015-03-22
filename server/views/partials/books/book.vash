@@ -22,7 +22,7 @@
 					<h4>Votes: {{book.votes}}</h4>					
 				</div>
 
-				<a href="" ng-click="favorite(book)"><img src="/images/star.png" ng-style="{opacity: book.isFavorite ? 1 : 0.2}" /></a>				
+				<a href="" ng-click="favorite(book)" id="favorite"><img src="/images/star.png" ng-style="{opacity: book.isFavorite ? 1 : 0.2}" /></a>				
 			</div>
 		</div>
 	</div>

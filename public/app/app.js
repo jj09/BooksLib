@@ -76,6 +76,10 @@
 				$rootScope.searchText = searchText;
 			});
 
+			voiceCmdr.addCommand('favorite', function () {
+				$('a#favorite').click();
+			});
+
 			// hook up the view
 			$rootScope.recStatus = function () {
 				return voiceCmdr.isRecognizing() ? 'gif' : 'jpg';
