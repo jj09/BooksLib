@@ -5,7 +5,6 @@ This is an example <a href="http://en.wikipedia.org/wiki/MEAN">MEAN Stack Applic
 ## Installation
 
     npm install
-    bower install
 
 ## Running
 

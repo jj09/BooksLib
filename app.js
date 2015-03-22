@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bookModel = require('./server/models/Book');
+var config = require('./config');
 
 var routes = require('./server/routes/index');
 
@@ -26,7 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // db
-mongoose.connect('mongodb://localhost/BooksLib');
+if(app.get('env') === 'development') { 
+    mongoose.connect('mongodb://localhost/BooksLib');
+} else {
+    mongoose.connect(config.db);
+}
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback () {
