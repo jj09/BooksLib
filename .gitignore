@@ -38,6 +38,3 @@ bower_components
 .bower-registry
 .bower-tmp
 public/vendor
-
-### App specific
-config.js

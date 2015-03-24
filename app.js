@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bookModel = require('./server/models/Book');
-var config = require('./config');
 
 var routes = require('./server/routes/index');
 
@@ -27,11 +26,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // db
-if(app.get('env') === 'development') { 
-    mongoose.connect('mongodb://localhost/BooksLib');
-} else {
-    mongoose.connect(config.db);
+switch (app.get('env')) {
+    case 'production_azure':
+        mongoose.connect(process.env.CUSTOMCONNSTR_BOOKSLIB_URI);
+        break;
+    case 'production_heroku':
+        mongoose.connect(process.env.BOOKSLIB_URI);
+        break;
+    default:
+        mongoose.connect('mongodb://localhost/BooksLib');
+        break;
 }
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback () {
