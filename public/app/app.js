@@ -81,8 +81,8 @@
 			});
 
 			// hook up the view
-			$rootScope.recStatus = function () {
-				return voiceCmdr.isRecognizing() ? 'gif' : 'jpg';
+			$rootScope.recStatusImg = function () {
+				return voiceCmdr.isRecognizing() ? 'sound-graph-listening.gif' : 'sound-graph-static.jpg';
 			};
 
 			$rootScope.listening = function (start) {

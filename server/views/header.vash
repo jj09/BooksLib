@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" ng-if="isVoiceSupported">
             <div class="navbar-right" style="padding: 10px; spacing: 10px">
                 <div class="col-md-4">
-                    <img ng-src="/images/status/sound-graph.{{recStatus()}}" alt="status" id="recStatus" />
+                    <img ng-src="/images/status/{{recStatusImg()}}" alt="status" id="recStatus" />
                 </div>
 
                 <div class="col-md-8">
