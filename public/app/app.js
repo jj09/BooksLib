@@ -42,7 +42,17 @@
 			// http://stackoverflow.com/questions/20070077/angularjs-view-not-updating-on-model-change
 			setInterval(function () {
 				$rootScope.$apply(); // http://stackoverflow.com/questions/11784656/angularjs-location-not-changing-the-path
-			}, 200);				
+			}, 200);
+
+			$rootScope.setSearchText = function (searchText) {
+				var $searchText = $('#searchText');
+				
+				if($searchText.is(':focus')) {
+					$searchText.blur();
+				}
+
+				$rootScope.searchText = searchText;
+			};
 
 			// debug logs are useful during development (should be turned of in prod)
 			voiceCmdr.debug(true);
@@ -54,6 +64,7 @@
 
 			voiceCmdr.addCommand('books', function () {
 				$location.path('/books');
+				$rootScope.setSearchText('');
 			});
 
 			voiceCmdr.addCommand('favorites', function () {
@@ -66,14 +77,7 @@
 
 			voiceCmdr.addCommand('search', function (searchText) {
 				$location.path('/books');
-
-				var $searchText = $('#searchText');
-				
-				if($searchText.is(':focus')) {
-					$searchText.blur();
-				}
-
-				$rootScope.searchText = searchText;
+				$rootScope.setSearchText(searchText);
 			});
 
 			voiceCmdr.addCommand('favorite', function () {
