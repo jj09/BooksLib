@@ -2,6 +2,6 @@
 	'use strict';
 
 	angular.module('app').controller('HomeController', function ($scope) {
-		$scope.msg = 'Hello from Angular';
+		$scope.msg = 'This website support voice commands!';
 	});
 }());
